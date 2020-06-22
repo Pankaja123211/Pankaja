@@ -11,6 +11,7 @@ pipeline {
       steps {
         echo 'Testing'
         sh 'jenkins/test-all.sh'
+        junit 'target/**/*.xml'
       }
     }
     stage('Deploy') {
